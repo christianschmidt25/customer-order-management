@@ -61,3 +61,20 @@ placeOrder('Jolie', [{name: 'Hoop', quantity: 3}, {name: 'Jersey', quantity: 1}]
 
 console.log(inventory) //checks the inventory after Jolie's order
 console.log(orders) //checks the orders to see if Jolie's order has been included
+
+
+// Task 4: Create a Function to Calculate Total for an Order
+
+function calculateOrderTotal(customerName) {
+    let customerOrder = orders.find(order => order.customerName === customerName); //defines new customerOrder by finding the customer's name in orders
+
+    let total = customerOrder.items.reduce((total, orderedItem) => { //defines a new total by creating one value from the sum of orderedItem prices
+        let product = inventory.find(item => item.name === orderedItem.name);
+        return total + (product.price*orderedItem.quantity);
+    }, 0);    
+    
+    console.log(`The total for ${customerName}'s order is $${total}.`);
+    return total;
+}
+calculateOrderTotal('Christian')
+
