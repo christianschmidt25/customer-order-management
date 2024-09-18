@@ -76,5 +76,19 @@ function calculateOrderTotal(customerName) {
     console.log(`The total for ${customerName}'s order is $${total}.`);
     return total;
 }
-calculateOrderTotal('Christian')
+calculateOrderTotal('Christian') //tests how much Christian's order is, outputs correct value.
 
+
+// Task 5: Create a Function to Mark an Order as Completed
+
+function completeOrder(customerName) {
+    let customerOrder = orders.find(order => order.customerName === customerName);
+
+    if (customerOrder.orderStatus = 'Pending') { //makes sure there is an open order that is pending, and will change to complete
+        customerOrder.orderStatus = 'Complete';
+            console.log(`${customerName}'s order has been completed.`)}
+    else (console.log("This order cannot be completed.")
+    )
+}
+
+completeOrder('Jolie')
