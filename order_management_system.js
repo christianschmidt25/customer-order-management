@@ -92,3 +92,14 @@ function completeOrder(customerName) {
 }
 
 completeOrder('Jolie')
+
+
+// Task 6: Create a Function to Check Pending Orders
+
+function checkPendingOrders(orders) {
+    const pendingOrders = orders.filter(orders => orders.orderStatus === 'Pending'); //creates a new term pendingOrders to only include those with a pending order status
+    {
+    return pendingOrders.map(order => order.customerName);} //will return the customers name after finding which ones are pending
+}
+
+console.log("PendingOrders:", checkPendingOrders(orders))
