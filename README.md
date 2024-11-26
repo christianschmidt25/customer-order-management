@@ -1,2 +1,2 @@
-# Coding-Challenge-5
-This is the repository for the Coding Challenge 5 assignment for ISM 3232.
+# Customer Order Management System
+This is a customer order management system, allowing users to manage customer orders for our small business. Items are included in an inventory array, with orders per customer being able to be placed and fully completed, which will update our system.
